@@ -19,11 +19,11 @@ public class Main {
         System.out.println(ferrari.model + " is driving at "+ ferrari.speed + " km/h");
         System.out.println(audi.model + " is driving at "+ audi.speed + " km/h");*/
 
-        Car ferrari = new Car("Ferrari GT0");
-        Car audi = new Car("Audi A8");
+        Car ferrari = new Car("Ferrari GT0", 300);
+        Car audi = new Car("Audi A8", 250);
 
-        ferrari.accelerate(100);
-        audi.accelerate(30);
+        ferrari.accelerate(500);
+        audi.accelerate(500);
 
         // System.out.println() calls toString() method by default
         System.out.println(ferrari);
