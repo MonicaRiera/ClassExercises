@@ -17,8 +17,8 @@ public class Car {
 
     // Methods / functions
 
-    public void printStatus(){
-        System.out.println(this.model + " is driving at "+ this.speed + " km/h");
+    public String toString(){
+        return this.model + " is driving at "+ this.speed + " km/h";
 
     }
 
