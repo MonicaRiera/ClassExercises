@@ -9,9 +9,9 @@ public class Car {
 
     // Constructor
 
-    public Car (String model, int speed){
+    public Car (String model){
         this.model = model;
-        this.speed = speed;
+        this.speed = 0;
 
     }
 

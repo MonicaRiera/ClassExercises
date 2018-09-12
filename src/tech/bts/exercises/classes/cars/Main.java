@@ -19,8 +19,10 @@ public class Main {
         System.out.println(ferrari.model + " is driving at "+ ferrari.speed + " km/h");
         System.out.println(audi.model + " is driving at "+ audi.speed + " km/h");*/
 
-        Car ferrari = new Car("Ferrari GT0", 200);
-        Car audi = new Car("Audi A8", 150);
+        Car ferrari = new Car("Ferrari GT0");
+        Car audi = new Car("Audi A8");
+
+        ferrari.speed = 200;
 
         ferrari.PrintStatus();
         audi.PrintStatus();
