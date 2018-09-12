@@ -15,7 +15,12 @@ public class Car {
 
     }
 
-    // Methods
+    // Methods / functions
+
+    public void PrintStatus (){
+        System.out.println(this.model + " is driving at "+ this.speed + " km/h");
+
+    }
 
 
 }
