@@ -22,10 +22,15 @@ public class Main {
         Car ferrari = new Car("Ferrari GT0");
         Car audi = new Car("Audi A8");
 
-        ferrari.speed = 200;
+        ferrari.accelerate(100);
+        ferrari.accelerate(50);
+        ferrari.accelerate(50);
+        ferrari.accelerate(99);
+        ferrari.accelerate(50);
 
-        ferrari.PrintStatus();
-        audi.PrintStatus();
+
+        ferrari.printStatus();
+        audi.printStatus();
 
 
 

@@ -17,9 +17,18 @@ public class Car {
 
     // Methods / functions
 
-    public void PrintStatus (){
+    public void printStatus(){
         System.out.println(this.model + " is driving at "+ this.speed + " km/h");
 
+    }
+
+    public void accelerate (int amount){
+
+        this.speed += amount;
+
+        if (this.speed > 300) {
+            this.speed = 300;
+        }
     }
 
 
