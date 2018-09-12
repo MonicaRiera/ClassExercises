@@ -4,8 +4,8 @@ public class Car {
 
     // Fields / Properties
 
-    String model;
-    int speed;
+    private String model;
+    private int speed;
 
     // Constructor
 
@@ -37,6 +37,10 @@ public class Car {
         if (this.speed < 0){
             this.speed = 0;
         }
+    }
+
+    public int getSpeed () {
+        return this.speed;
     }
 
 
