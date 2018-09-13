@@ -1,8 +1,5 @@
 package tech.bts.exercises.classes.radio;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Radio {
 
@@ -25,66 +22,38 @@ public class Radio {
 
     // Methods
     public String toString () {
-        String result;
-
-        if (this.turnedOn){
-            result = "Radio is playing frequency " + this.frequency + " at volume: " + this.volume;
-        } else {
-            result = "Radio OFF.";
-
-        }
-
-        return result;
+        String status = this.turnedOn ? "ON" : "OFF";
+        return "Radio " + status + ", playing frequency " + this.frequency + " at volume: " + this.volume;
     }
 
     public void turnVolumeUp (int amount) {
-        this.volume += amount;
+        if (this.turnedOn) {
+            this.volume += amount;
 
-        if (!this.turnedOn) {
-            this.volume = 0;
-            System.out.println("Volume " + this.volume + ". Can't turn volume up because the radio is OFF");
-        } else if (this.volume > this.maxVolume) {
-            this.volume = this.maxVolume;
-
+            if (this.volume > this.maxVolume) {
+                this.volume = this.maxVolume;
+            }
         }
-
     }
 
     public void turnVolumeDown (int amount) {
-        this.volume -= amount;
+        if (this.turnedOn){
+            this.volume -= amount;
 
-        if (this.volume < 0) {
-            this.volume = 0;
+            if (this.volume < 0) {
+                this.volume = 0;
+            }
         }
     }
-
-    /*public void turnOn () {
-        this.turnedOn = true;
-    }
-
-    public void turnOff () {
-        this.turnedOn = false;
-        this.volume = 0;
-    }*/
 
     public void switchOnOff () {
-        if (this.turnedOn) {
-            this.turnedOn = false;
-        } else {
-            this.turnedOn = true;
-            System.out.println("Your radio is on! Current volume: " + this.volume);
-        }
-
+        this.turnedOn = !this.turnedOn;
     }
 
     public void playChanel (int index) {
-
         if (this.turnedOn){
             this.frequency = this.channels.get(index-1);
-        } else {
-            System.out.println("Radio OFF. Can't play any channel. Please turn ON.");
         }
-
     }
 
     public void setChannelFrequency (int index, double frequency) {

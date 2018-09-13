@@ -21,5 +21,14 @@ public class Main {
         radio.turnVolumeUp(10);
         radio.playChanel(5);
 
+        radio.switchOnOff();
+        System.out.println(radio);
+
+        radio.turnVolumeUp(10);
+        radio.playChanel(5);
+        System.out.println(radio);
+
+
+
     }
 }
